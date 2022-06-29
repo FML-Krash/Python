@@ -16,12 +16,9 @@ def apagar_Contactos():
 def adicionar_Contactos():
     nome =(input("Qual o nome do Contacto: "))
     telefone =(input("Qual o Contacto: "))
-    #ciclo percorre as str do dicionario contactos id="contactoX" guardando assim o ultimo caracter da STR
-    #tranformando o 9º CHAR em INT para ser possivel efectuar um calculo str(contacto)int(2)+1
-    #Dando assim origem ao conctato3 e assim por diante.
+  
     for y in contactos:
         id=int(y[8])+1
-        #Transformando o INT em CHAR novamente a fim de o concatenar com a STR(contacto)
     contactos.update({"contacto" + str(id) + "": {"nome": nome, "telefone": telefone}})
 
 def atualizar_Contactos():
